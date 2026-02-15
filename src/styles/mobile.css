@@ -1,0 +1,170 @@
+/* Mobile-specific styles for enhanced mobile experience */
+
+/* Touch-friendly button enhancements */
+button, a {
+  /* Prevent default touch highlighting */
+  -webkit-tap-highlight-color: transparent;
+  
+  /* Improve touch target size */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Mobile navigation enhancements */
+.mobile-menu {
+  /* Better touch scrolling */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  /* Prevent text scaling on orientation change */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Mobile form elements */
+input, textarea, select {
+  /* Prevent zoom on iOS */
+  font-size: 16px;
+}
+
+/* Mobile image optimization */
+img {
+  /* Prevent horizontal scrolling */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile video and media */
+video, iframe {
+  /* Responsive media */
+  max-width: 100%;
+}
+
+/* Mobile spacing adjustments */
+.container {
+  /* Better mobile padding */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Mobile gesture improvements */
+.gesture-target {
+  /* Enable smooth scrolling */
+  overflow-scrolling: touch;
+  
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+}
+
+/* Mobile focus states */
+*:focus {
+  /* Better focus visibility on mobile */
+  outline: 2px solid #834b41;
+  outline-offset: 2px;
+}
+
+/* Mobile hover state alternatives */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  .hover\:shadow-xl:hover {
+    box-shadow: none;
+  }
+}
+
+/* Mobile animation optimizations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Mobile performance optimizations */
+.performance-optimized {
+  /* Hardware acceleration for transforms */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Mobile viewport units */
+.full-height-mobile {
+  height: 100vh;
+  /* Fallback for mobile browsers */
+  min-height: 100vh;
+}
+
+/* Mobile safe areas */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Mobile gesture handling */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Mobile scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile tap delay removal */
+.tap-target {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Mobile font smoothing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile image loading optimization */
+.lazy-load {
+  loading: lazy;
+}
+
+/* Mobile CSS custom properties for theming */
+:root {
+  --mobile-font-size: 16px;
+  --mobile-line-height: 1.5;
+  --mobile-spacing: 16px;
+  --touch-target-size: 44px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
