@@ -63,7 +63,7 @@ export default function TrialClass() {
         <div ref={contentRef} className="text-center">
           {/* Section Header */}
           <div className="animate-item inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
-            <span className="text-xs sm:text-sm font-semibold text-white/90">Clase de prueba (Zoom)</span>
+            <span className="text-xs sm:text-sm font-semibold text-white/90">Clase de prueba (Discord)</span>
           </div>
 
           <h2 className="animate-item text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
