@@ -8,7 +8,14 @@
   targetPort = 5173
   functionsPort = 9999
 
+# API 重定向（已有）
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA 重定向：所有路由都指向 index.html（新增）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
