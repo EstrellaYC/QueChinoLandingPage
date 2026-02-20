@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: '¿Quién soy?', href: '#about' },
-  { name: 'Ventajas', href: '#benefits' },
   { name: 'Inscribirme', href: '#enrollment' },
   { name: 'Clase de prueba', href: '#trial' },
+  { name: 'Curso grabado', href: '#curso' },
   { name: 'Intérprete', href: '#interpretation' },
 ];
 
